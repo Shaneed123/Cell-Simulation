@@ -37,7 +37,7 @@ maxTemp = 200
 
 
 detailed = True
-"""boolean: Decides whether or not the output will be detailed or not (check the __str__ functions of both classes below)"""
+"""boolean: Decides whether or not the output will be detailed or not (check the __str__ functions of both classes below)"""
 
 
 
