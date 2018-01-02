@@ -25,14 +25,14 @@ top.resizable(False, False)
 top.title("Cell Simulation")
 """Initializes the tkinter window that will be used"""
 
-food = -10
+food = 0.0
 """float: the minimum food that will be needed by the first cell"""
 
-water = 0.1
+water = 0.0
 """float: the minimum humidity percentage expressed as a decimal which the cell needs"""
 
-minTemp = 32
-maxTemp = 200
+minTemp = -999
+maxTemp = 999
 """float: the range of temperature values (inclusive) which the cell cal reproduce in"""
 
 
@@ -256,6 +256,16 @@ def buildLand():
     
     global day
     global landMass
+    global food
+    global water
+    global minTemp
+    global maxTemp
+
+    food = random.uniform(0,1)
+    water = random.uniform(0,1)
+    minTemp = random.randint(-100,0)
+    maxTemp = random.randint(0,200)
+    
     day = 1
     land = [[0 for x in range(landCols)] for y in range(landRows)]
 
